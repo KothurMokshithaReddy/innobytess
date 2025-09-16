@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kingsukh Guest House — Manpur, Baranti | Stay • Book • Explore</title>
+  <meta name="description" content="Kingsukh Guest House in Manpur, Baranti — comfortable rooms, garden, local guides and easy booking. Call +91 9007062180." />
+  <meta name="keywords" content="Kingsukh Guest House, Baranti, Manpur, Purulia hotels, guest house Baranti" />
+  <link rel="icon" href="/assets/favicon.png" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Kingsukh Guest House — Manpur, Baranti" />
+  <meta property="og:description" content="Comfortable stays near Baranti Hill & Baranti Lake. Book now: +91 9007062180" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="/assets/out.jpg" />
+
+  <!-- Structured data (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Kingsukh Guest House",
+    "telephone": "+919007062180",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Beside Barshal Water Tank, Manpur, Barhanti",
+      "addressLocality": "Purulia",
+      "addressRegion": "West Bengal",
+      "postalCode": "723156",
+      "addressCountry": "IN"
+    },
+    "url": "https://example.com/",
+    "image": ["/assets/out.jpg"],
+    "description": "Guest house near Baranti Hill and Baranti Lake — comfortable rooms, garden and local guides."
+  }
+  </script>
+
+  <style>
+    /* Reset & base */
+    :root{--accent:#0ea5a4;--dark:#0f172a;--muted:#64748b;--card:#ffffff;--glass:rgba(255,255,255,0.06)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:var(--dark);background:linear-gradient(180deg,#f8fafc 0%, #eef2f7 100%)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;height:auto}
+
+    /* container */
+    .container{max-width:1100px;margin:0 auto;padding:1rem}
+
+    /* header */
+    header{background:linear-gradient(90deg,#0f172a00 0%, #0ea5a4 100%);padding:0.75rem 0;position:sticky;top:0;z-index:60;backdrop-filter:blur(6px)}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .brand h1{font-size:1.05rem;margin:0;color:#fff}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{padding:.5rem .75rem;border-radius:8px;color:#fff;opacity:.95}
+    .cta{background:var(--dark);color:#fff;padding:.5rem .9rem;border-radius:8px}
+    .menu-toggle{display:none;border:0;background:transparent;color:#fff;font-size:1.25rem}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .hero h2{font-size:2rem;margin:0 0 .5rem}
+    .hero p{color:var(--muted);margin:0 0 1rem}
+    .hero .card{background:var(--card);border-radius:12px;padding:1rem;box-shadow:0 8px 30px rgba(2,6,23,.08)}
+    .booking-btn{display:inline-block;padding:.6rem 1rem;background:var(--accent);color:white;border-radius:10px}
+
+    /* rooms grid */
+    .rooms{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+    .room{background:#fff;border-radius:10px;overflow:hidden;display:flex;gap:1rem}
+    .room img{width:42%;object-fit:cover}
+    .room .meta{padding:.75rem}
+    .room h3{margin:.25rem 0}
+    .price{font-weight:700;color:var(--accent)}
+
+    /* services */
+    .services{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+    .service{background:linear-gradient(180deg,#fff,#f8fafc);padding:.75rem;border-radius:8px;flex:1;min-width:160px;text-align:center}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:1rem 0}
+    .gallery img{height:120px;width:100%;object-fit:cover;border-radius:6px;cursor:pointer}
+
+    /* contact */
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0}
+    .contact .info{background:var(--card);padding:1rem;border-radius:8px}
+    .form input,.form textarea{width:100%;padding:.6rem;border:1px solid #e6eef6;border-radius:8px;margin:.45rem 0}
+    .form button{display:inline-block;padding:.6rem 1rem;background:var(--dark);color:#fff;border-radius:8px;border:0}
+
+    /* footer */
+    footer{padding:1.25rem 0;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+      .rooms{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .menu-toggle{display:inline-block}
+      .nav-links{display:none;position:absolute;top:64px;right:12px;background:rgba(15,23,42,.95);padding:0.5rem;border-radius:10px}
+      .nav-links a{display:block;color:#fff}
+    }
+
+    @media (max-width:480px){.gallery img{height:90px}}
+
+    /* lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(2,6,23,.7);display:flex;align-items:center;justify-content:center;z-index:80;opacity:0;pointer-events:none;transition:opacity .2s}
+    .lightbox[aria-hidden="false"]{opacity:1;pointer-events:auto}
+    .lightbox img{max-width:90%;max-height:80%;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="/assets/logo.png" alt="Kingsukh Guest House logo" width="44" height="44" style="border-radius:8px" />
+        <h1>Kingsukh Guest House</h1>
+      </div>
+      <nav>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navigation">☰</button>
+        <div class="nav-links" id="navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="https://wa.link/at5ion" rel="noopener" target="_blank">BOOK NOW</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <h2>Make yourself at home — Kingsukh Guest House</h2>
+        <p>Peaceful garden, warm hospitality and easy access to Baranti Hill, Baranti Lake and local attractions in Purulia. Rooms from Rs.1000/night. Call <a href="tel:+919007062180">+91 9007062180</a>.</p>
+        <div class="card">
+          <p style="margin:0 0 .5rem"><strong>Quick actions</strong></p>
+          <a class="booking-btn" href="https://wa.link/at5ion" target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="booking-btn" href="#contact" style="margin-left:8px;background:#fff;color:var(--dark);border:1px solid #e6eef6">Contact Us</a>
+        </div>
+
+        <section aria-labelledby="rooms-heading" style="margin-top:1.25rem">
+          <h3 id="rooms-heading">Our Rooms</h3>
+          <div class="rooms" role="list">
+            <article class="room" role="listitem">
+              <img loading="lazy" src="/assets/small.jpg" alt="Cozy Haven Room — bed and window view" />
+              <div class="meta">
+                <h3>Cozy Haven Room</h3>
+                <p class="muted">Snug double room with garden view, comfortable bedding and complimentary breakfast.</p>
+                <p class="price">Starting from Rs. 1000/night</p>
+                <a class="booking-btn" href="https://wa.link/at5ion">Book</a>
+              </div>
+            </article>
+            <article class="room" role="listitem">
+              <img loading="lazy" src="/assets/large.jpg" alt="Spacious Serenity Suite — living area" />
+              <div class="meta">
+                <h3>Spacious Serenity Suite</h3>
+                <p class="muted">Larger suite for families — seating area, private balcony on request.</p>
+                <p class="price">Starting from Rs. 1500/night</p>
+                <a class="booking-btn" href="https://wa.link/at5ion">Book</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card">
+        <h4 style="margin-top:0">Location & Contact</h4>
+        <p class="muted" style="margin:0 0 .5rem">Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</p>
+        <p style="margin:0 0 .5rem"><a href="https://maps.app.goo.gl/7wYUEB4tvR7NMHbcA" target="_blank" rel="noopener">Open in Maps</a></p>
+        <p style="margin:0 0 1rem"><a href="tel:+919007062180">+91 9007062180</a></p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <a class="booking-btn" href="https://wa.link/at5ion">BOOK NOW</a>
+          <a class="booking-btn" href="#gallery" style="background:#fff;color:var(--dark);border:1px solid #e6eef6">View Gallery</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:1.5rem">
+      <h3>About Us</h3>
+      <p class="muted">Kingsukh Guest House — your comfortable base to explore Baranti Hill, Biharinath Hill, Susunia Hill and nearby dams and attractions. Friendly hosts, home-cooked meals and local guidance available.</p>
+    </section>
+
+    <section id="services" style="margin-top:1rem">
+      <h3>Services</h3>
+      <div class="services" role="list">
+        <div class="service" role="listitem">24-Hour Reception</div>
+        <div class="service" role="listitem">Home-cooked Meals</div>
+        <div class="service" role="listitem">Tourist Guide Support</div>
+        <div class="service" role="listitem">Secure Parking</div>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:1.25rem">
+      <h3>Gallery</h3>
+      <div class="gallery" aria-live="polite">
+        <img loading="lazy" src="/assets/out.jpg" alt="Exterior view Kingsukh Guest House" data-full="/assets/out.jpg">
+        <img loading="lazy" src="/assets/ayodhya.webp" alt="Ayodhya view" data-full="/assets/ayodhya.webp">
+        <img loading="lazy" src="/assets/large.jpg" alt="Suite interior" data-full="/assets/large.jpg">
+        <img loading="lazy" src="/assets/palash.webp" alt="Garden flowers" data-full="/assets/palash.webp">
+        <img loading="lazy" src="/assets/small.jpg" alt="Cozy room" data-full="/assets/small.jpg">
+        <img loading="lazy" src="/assets/baranti.webp" alt="Baranti Lake" data-full="/assets/baranti.webp">
+        <img loading="lazy" src="/assets/recep.jpg" alt="Reception area" data-full="/assets/recep.jpg">
+        <img loading="lazy" src="/assets/flower.jpg" alt="Decorative flower" data-full="/assets/flower.jpg">
+        <img loading="lazy" src="/assets/room1.jpg" alt="Room detail" data-full="/assets/room1.jpg">
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:1.25rem">
+      <h3>Contact & Booking</h3>
+      <div class="contact">
+        <div class="info">
+          <strong>Address</strong>
+          <p class="muted">Beside Barshal Water Tank,<br>Manpur, Barhanti, West Bengal 723156</p>
+          <p><strong>Phone:</strong> <a href="tel:+919007062180">+91 9007062180</a></p>
+          <p><strong>Email:</strong> <a href="mailto:kkghosh0099@gmail.com">kkghosh0099@gmail.com</a></p>
+          <p style="margin-top:.5rem"><a href="https://www.instagram.com/kingsukhguesthouse/" target="_blank" rel="noopener">Instagram</a></p>
+
+          <div style="margin-top:.5rem">
+            <iframe title="Kingsukh Guest House map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5017351225647!2d86.85721547510981!3d23.586332378782714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6e3fdd3ff9ebb%3A0x517a57e3f93c1807!2sKingsukh%20Guest%20House!5e0!3m2!1sen!2sin!4v1705088034844!5m2!1sen!2sin" width="100%" height="220" style="border:0;border-radius:8px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="return handleForm(event)">
+          <label class="sr-only" for="fname">First name</label>
+          <input id="fname" name="fname" placeholder="First name" required>
+          <input id="lname" name="lname" placeholder="Last name">
+          <input id="email" name="email" type="email" placeholder="Email address" required>
+          <input id="phone" name="phone" placeholder="Mobile number" required>
+          <textarea id="message" name="message" rows="5" placeholder="Message / dates / special requests" required></textarea>
+          <button type="submit">Send inquiry</button>
+          <p class="muted" style="font-size:.85rem;margin-top:.5rem">Or <a href="https://wa.link/at5ion" target="_blank">book via WhatsApp</a></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <img alt="Preview">
+  </div>
+
+  <footer class="container" style="margin-top:2rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <div>
+        <strong>Kingsukh Guest House</strong>
+        <div class="muted">Beside Barshal Water Tank, Manpur, Barhanti — Purulia, West Bengal</div>
+      </div>
+      <div style="text-align:right">
+        <div class="muted">© <span id="year"></span> Kingsukh Guest House. All rights reserved.</div>
+        <div style="margin-top:.35rem"><a href="https://wa.link/at5ion">Book on WhatsApp</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small utility JS: nav toggle, gallery lightbox, form->mailto fallback
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navigation');
+    menuToggle?.addEventListener('click', ()=>{
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.style.display = expanded ? 'none' : 'block';
+    });
+
+    // lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = lightbox.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', ()=>{
+        lbImg.src = img.dataset.full || img.src;
+        lightbox.setAttribute('aria-hidden','false');
+      });
+    });
+    lightbox.addEventListener('click', ()=> lightbox.setAttribute('aria-hidden','true'));
+
+    // form handler: open mailto with form content (fallback if no backend)
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = (f.fname.value || '') + ' ' + (f.lname.value || '');
+      const subj = encodeURIComponent('Booking inquiry from website — ' + name.trim());
+      const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + f.phone.value + '\nEmail: ' + f.email.value + '\n\nMessage:\n' + f.message.value);
+      const to = 'kkghosh0099@gmail.com';
+      // open mail client
+      window.location.href = `mailto:${to}?subject=${subj}&body=${body}`;
+      return false;
+    }
+
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
